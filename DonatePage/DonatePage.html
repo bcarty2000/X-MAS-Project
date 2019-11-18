@@ -1,0 +1,213 @@
+<!--Donate Page, made by Bryan Carty (19235836)-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+	<title>GWF - Donate</title>
+	<style>
+	
+		textarea{
+			resize:vertical;
+			max-height: 100px;
+		}
+
+		form{
+			text-align:center;
+		}
+
+		.container {
+			width: 100%;
+			margin: 0;
+			background: white;
+			top: 0;
+			margin-bottom: -16px;
+			margin-top: -16px;
+		}
+
+		.logo {
+			float: left;
+		}
+			
+		nav li {
+			display:inline-block;
+			margin-left: 144.3px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			position: relative;
+		}
+			
+		nav a {
+			font-family:Arial, Helvetica, sans-serif;
+			text-decoration: none;
+			color: black; 
+		}
+			
+		a:hover {
+			color:#0ca828;
+		}
+			
+		nav a::before {
+			content: '';
+			display: block;
+			height: 5px;
+			background-color: #0ca828;
+			position: absolute;
+			top: 0px;
+			width: 0%;
+			transition: all ease-in-out 250ms;
+		}
+			
+		nav a:hover::before {
+			width: 100%;
+		}
+			
+		body {
+			color: black;
+			font-family: Arial;
+			margin: 0;
+			padding: 0;
+		}
+			
+		section {
+			background-color: aliceblue;
+			background-repeat: repeat;
+			padding: 20px;
+			display: flex;
+			flex-direction: row;
+		}
+			
+		.boxes{
+			margin: auto;
+			background: rgb(230,255,230);
+			width: 600px;
+			height: 700px;
+			border-radius: 100px;
+			border: 2px solid green;
+		}
+
+		p{
+			text-align: center;
+		}
+		
+		.w-image{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+			padding: 15px;
+			border-radius: 100px;
+		}
+		
+		footer{
+			width: 100%; 
+			background-color: #c46200; 
+			color: #fff; 
+			padding-top: 16px; 
+			padding-bottom: 14px;
+			text-align: center;
+			font-size: 16px;
+			font-family: batang;
+		}
+		
+		ul{
+			border: 1px solid black;
+		}
+		
+	</style>
+	<script>
+	
+		function acknowledgementFunction(){
+			document.getElementById("response").innerHTML = "Thank You For Your Donation";
+		}
+		
+	</script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<img src="GreenWillLogo.png" height="50px" width="600px" alt = logo class="logo">
+			<nav>
+				<ul>
+					<li> <a href="HomePage.html">HOME</a> </li>
+					<li> <a href="AboutPage.html">ABOUT</a> </li>
+					<li> <a href="#Contact">CONTACT</a> </li>
+					<li> <a href="#Donate">DONATE</a></li>	  
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section>
+		<div class="boxes">
+			<img class="w-image"src="plantingtree.jpg"alt="Father & Son Planting A Tree"style="width:560px;height:auto;">
+			<br>
+			<p style="margin:0 auto; font-size:20px; max-width:500px">One and a half acres of forest is cut down every second. At this rate, it is estimated that within 100 years there will be no rainforests left.<br><br>
+			By donating, you are enabling our team to plant trees where reforestation is needed the most.
+			For every €1 donated, one tree is planted.<br><br>
+			Join us on our mission to plant 300 million trees by the year 2025.
+			</p>
+		</div>
+		<div class="boxes">
+			<form>
+				<h1 style="font-size: 50px;text-decoration: underline;">Donate</h1>
+				<p style="font-size:25px;"><b>How much do you want to donate?</b></p>
+				€5: <input type="radio" name="amount" value="€5" >
+				€10: <input type="radio" name="amount" value="€10">
+				€20: <input type="radio" name="amount" value="€20">
+				€50: <input type="radio" name="amount" value="€50">
+				Other: <input type="text" name="amount" placeholder="Other amount">
+				<br><br><br>
+				<p style="font-size:25px;"><b>Please enter your credit/debit card details below:</b></p>
+				<br><br>
+				<select name="card">
+					<option value="card1">Card Type</option>
+					<option value="card2">Visa</option>
+					<option value="card3">MasterCard</option>
+				</select>
+				Card Number: <input type="text" name="number" placeholder="Card Number"><br>
+				<br>
+				Expiry Date: 
+				<select name="month">
+					<option value="m1">Jan</option>	
+					<option value="m2">Feb</option>	
+					<option value="m3">Mar</option>	
+					<option value="m4">Apr</option>	
+					<option value="m5">May</option>	
+					<option value="m6">June</option>	
+					<option value="m7">July</option>	
+					<option value="m8">Aug</option>	
+					<option value="m9">Sept</option>	
+					<option value="m10">Oct</option>	
+					<option value="m11">Nov</option>	
+					<option value="m12">Dec</option>	
+				</select>
+				<select name="year">
+					<option value="y1">2019</option>
+					<option value="y2">2020</option>
+					<option value="y3">2021</option>
+					<option value="y4">2022</option>
+					<option value="y5">2023</option>
+					<option value="y6">2024</option>
+					<option value="y7">2025</option>
+					<option value="y8">2026</option>
+					<option value="y9">2027</option>
+					<option value="y10">2028</option>
+					<option value="y11">2029</option>
+					<option value="y14">2032</option>
+					<option value="y15">2033</option>
+				</select>
+				Security Code: <input type="text" name="code" placeholder="Security code"><br><br>
+				First Name On Card: <input type="text" name="f-name" placeholder="First Name"><br><br>
+				Last Name On Card: <input type="text" name="s-name" placeholder="Second Name"><br><br>
+				Note(optional): <textarea name="note" placeholder="Write a note"></textarea>
+				<br><br><br>
+				<button onclick="acknowledgementFunction()"style="height:35px;width:125px;" type="button"; name="submit">Submit</button>
+				<p id="response"></p>
+			</form>
+		</div>
+	</section>
+	<footer>Brought to you by Team Green Will</footer>
+</body>
+</html>
+ 
